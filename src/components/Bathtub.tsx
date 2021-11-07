@@ -50,7 +50,7 @@ const Bathtub = (props: BathtubProps) => {
     }
 
     const handleHeight= () => new Promise<any>((res, rej)=>{
-        setTimeout(()=>{
+        _.delay(()=>{
             console.log("mode", props.mode);
             switch (props.mode) {
                 case BathtubMode.Increase:
