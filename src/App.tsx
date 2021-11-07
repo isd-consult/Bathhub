@@ -13,7 +13,7 @@ function App() {
         <button className="p-2 bg-info" onClick={handleBathhub(BathtubMode.Increase)}>increaseWaterLevel</button>
         <button className="p-2 bg-info" onClick={handleBathhub(BathtubMode.Decrease)}>decreaseWaterLevel</button>
         <button className="p-2 bg-info" onClick={handleBathhub(BathtubMode.Stop)}>stop</button>
-        <button className="p-2 bg-info" onClick={handleBathhub(BathtubMode.Initial)}>initial</button>
+        <button className="p-2 bg-info" onClick={handleBathhub(BathtubMode.Initial)} disabled={mode !== BathtubMode.Stop}>initial</button>
       </div>
     );
   }
