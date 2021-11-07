@@ -63,17 +63,18 @@ const Bathtub = (props: BathtubProps) => {
                     break;
                 case BathtubMode.Stop: return res({isStop: true});
             }
-        }, 1000)
+        }, 2000)
     })
 
     const renderWater = () => {
        return _.map( _.range(height), (_, index) => {
-            return <div className="p-2 bg-primary mx-1 border" key={index} style={{height: '100px'}} />
+            return <div className="p-2 bg-primary mx-1 " key={index} style={{height: '20px'}} />
         });
     }
     return (
-        <div className="d-flex flex-column-reverse m-auto" style={{height: '500px', width: '300px'}}>
+        <div className="d-flex flex-column-reverse m-auto" style={{height: '500px', width: '200px'}}>
             {renderWater()}
+            <p>The height of water: <span className="text-danger ">{height}</span></p>
         </div>
     );
 }
